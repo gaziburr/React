@@ -1,0 +1,6 @@
+*.eslintrc
+node_modules/
+*.env.local
+*.eslintcache
+*.eslintcache.json
+*.eslintrc.json
