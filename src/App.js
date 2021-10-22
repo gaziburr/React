@@ -1,6 +1,6 @@
 import ExpenseItem from './Components/ExpenseItem.js';
 
-function App() {
+const App=()=> {
   const expenses = [
     {
       id: 'id1',
@@ -20,7 +20,7 @@ function App() {
       amount: 32.92,
       date: new Date(2021, 9, 4),
     },
-    {
+   {
       id: 'id4',
       title: 'Accessories',
       amount: 214.48,
@@ -36,7 +36,6 @@ function App() {
           amount={expenses[0].amount}
           date={expenses[0].date}></ExpenseItem>
         <ExpenseItem
-
           title={expenses[1].title}
           amount={expenses[1].amount}
           date={expenses[1].date}></ExpenseItem>
