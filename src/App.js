@@ -1,6 +1,7 @@
-import ExpenseItem from './Components/ExpenseItem.js';
-
-const App=()=> {
+import './Components/ExpenseItem.css';
+import Expenses from './Components/Expenses.js';
+import './Components/Card.css';
+const App = () => {
   const expenses = [
     {
       id: 'id1',
@@ -20,7 +21,7 @@ const App=()=> {
       amount: 32.92,
       date: new Date(2021, 9, 4),
     },
-   {
+    {
       id: 'id4',
       title: 'Accessories',
       amount: 214.48,
@@ -29,26 +30,9 @@ const App=()=> {
   ];
   return (
     <div>
-      <h2>Lets get Started !</h2>
-      <div>
-        <ExpenseItem
-          title={expenses[0].title}
-          amount={expenses[0].amount}
-          date={expenses[0].date}></ExpenseItem>
-        <ExpenseItem
-          title={expenses[1].title}
-          amount={expenses[1].amount}
-          date={expenses[1].date}></ExpenseItem>
-        <ExpenseItem
-          title={expenses[2].title}
-          amount={expenses[2].amount}
-          date={expenses[2].date}></ExpenseItem>
-        <ExpenseItem
-          title={expenses[3].title}
-          amount={expenses[3].amount}
-          date={expenses[3].date}></ExpenseItem>
-      </div>
+      <Expenses items={expenses}></Expenses>
     </div>
   );
-}
+};
+// If There is no content between the opening and closing tag of custom Components we can We can use Self Closing tag Instead
 export default App;
