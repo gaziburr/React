@@ -1,6 +1,8 @@
-import './Components/ExpenseItem.css';
-import Expenses from './Components/Expenses.js';
-import './Components/Card.css';
+import React from 'react';
+// In Modern react setup we need not import React but use jsx
+import './Components/Expenses/ExpenseItem.css';
+import Expenses from './Components/Expenses/Expenses.js';
+import './Components/UI/Card.css';
 const App = () => {
   const expenses = [
     {
@@ -28,11 +30,17 @@ const App = () => {
       date: new Date(2020, 3, 24),
     },
   ];
-  return (
-    <div>
-      <Expenses items={expenses}></Expenses>
-    </div>
+  // return (
+  // <div>
+  // <Expenses items={expenses}></Expenses>
+  // </div>
+  // );
+//Alternative aproach of returning element  as JSX . Here , Infact behind the scenes JSX converts to these :-----
+  return React.createElement(
+    'div',
+    {},
+    React.createElement('h2', {}, "Let's get started"),
+    React.createElement(Expenses, {items: expenses}),
   );
 };
-// If There is no content between the opening and closing tag of custom Components we can We can use Self Closing tag Instead
 export default App;
