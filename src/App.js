@@ -30,17 +30,10 @@ const App = () => {
       date: new Date(2020, 3, 24),
     },
   ];
-  // return (
-  // <div>
-  // <Expenses items={expenses}></Expenses>
-  // </div>
-  // );
-//Alternative aproach of returning element  as JSX . Here , Infact behind the scenes JSX converts to these :-----
-  return React.createElement(
-    'div',
-    {},
-    React.createElement('h2', {}, "Let's get started"),
-    React.createElement(Expenses, {items: expenses}),
+  return (
+    <div>
+      <Expenses items={expenses} />
+    </div>
   );
 };
 export default App;
